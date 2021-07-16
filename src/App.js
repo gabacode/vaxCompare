@@ -13,8 +13,8 @@ const options = comuni.map(item => (
 
 export default function Home() {
 
-  const [istat, setIstat] = useState(82006);
-  const [istat2, setIstat2] = useState(82053);
+  const [istat, setIstat] = useState(82053);
+  const [istat2, setIstat2] = useState(87015);
 
   const handleChange = (selectedOption) => {
     setIstat(selectedOption.value)
@@ -27,7 +27,7 @@ export default function Home() {
     <div className="container">
       <div className="row">
         <div className="col-12 col-md-6">
-          <h1>{istat}</h1>
+          {/* <h1>{istat}</h1> */}
           <Select
             filterOption={createFilter({ ignoreAccents: false })}
             options={options}
@@ -37,7 +37,7 @@ export default function Home() {
           <Vax istat={istat}/>
         </div>
         <div className="col-12 col-md-6">
-          <h1>{istat2}</h1>
+          {/* <h1>{istat2}</h1> */}
           <Select
             filterOption={createFilter({ ignoreAccents: false })}
             options={options}

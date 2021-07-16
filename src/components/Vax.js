@@ -13,13 +13,13 @@ export default function Vax({istat}){
             })
             .then((response) => {
             setResponseData(response.data.result)
-            fetchData();
+            //fetchData();
             setIsLoading(false);
             })
             .catch((error) => {
             alert(error)
             })
-        }, [])
+        }, [istat])
         useEffect(() => {
             fetchData()
         }, [fetchData])
