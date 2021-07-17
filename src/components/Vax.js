@@ -2,19 +2,17 @@ import React, { useState, useEffect, useCallback } from "react";
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import axios from 'axios';
 
-export default function Vax({istat}){
+export default function Vax({istat, sendData, sendLoad}){
     const [isLoading,setIsLoading] = useState(true)
     let [data, setResponseData] = useState('');
 
     const fetchData = useCallback(async () => {
-        axios({
-            "method": "GET",
-            "url": `https://dati.regione.sicilia.it/api/3/action/datastore_search?resource_id=30e9d3ea-0c7c-40c0-846b-a36f173028fe&q=${istat}`
-            })
+        axios.get(`https://dati.regione.sicilia.it/api/3/action/datastore_search?resource_id=30e9d3ea-0c7c-40c0-846b-a36f173028fe&q=${istat}`)
             .then((response) => {
             setResponseData(response.data.result)
-            //fetchData();
+            sendData(response.data.result.records)
             setIsLoading(false);
+            sendLoad(false);
             })
             .catch((error) => {
             alert(error)
@@ -27,6 +25,7 @@ export default function Vax({istat}){
     const risultati = data.records;
     let totVax = [];
     let totTarget = [];
+
          
     return(
         isLoading ? 'Caricamento...' :
