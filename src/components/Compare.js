@@ -44,9 +44,6 @@ export default function ApexChart({c1, c2}){
     // for(let i = 0; i < com1VaxPercent.length; i++){
     //   diff2[i] = com2VaxPercent[i] - com1VaxPercent[i];
     // }
-
-    console.log(com1VaxPercent)
-
     var series = [
       {
           name: com1.name,
@@ -82,7 +79,12 @@ export default function ApexChart({c1, c2}){
         grid: {
           xaxis: {
             lines: {
-              show: false
+              show: true
+            }
+          },
+          yaxis: {
+            lines: {
+              show: true
             }
           }
         },
@@ -128,7 +130,6 @@ export default function ApexChart({c1, c2}){
         <div id="chart">
           <ReactApexChart options={options} series={series} type="bar" height={440} />
         </div>
-        {/* {console.log(relDiff(1, 2))} */}
         </Fragment>
       )
 }
