@@ -10,7 +10,8 @@ export default function Footer(){
                     
                 </div>
                 <div style={{textAlign:'right',alignSelf:'center'}} className="col-12 col-md-4">
-                    Fonte dati: <a href="https://dati.regione.sicilia.it/dataset/covid-19-vaccini-sicilia-target-e-vaccinati-per-comune-e-fasce-di-eta" target="_blank" rel="noreferrer">Regione Sicilia</a>
+                    Fonte dati: <a href="https://dati.regione.sicilia.it/dataset/covid-19-vaccini-sicilia-target-e-vaccinati-per-comune-e-fasce-di-eta" target="_blank" rel="noreferrer">Regione Sicilia</a><br/>
+                    Powered by: <a href="https://twitter.com/opendatasicilia" target="_blank" rel="noreferrer">opendatasicilia</a>
                 </div>
             </div>
         </div>
