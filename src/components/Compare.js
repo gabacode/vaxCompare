@@ -3,9 +3,9 @@ import ReactApexChart from "react-apexcharts";
 
 export default function ApexChart({c1, c2}){
 
-  const relDiff = (a, b) => {
-    return  100 * ( ( a - b ) / ( (a+b)/2 ) );
-   }
+  // const relDiff = (a, b) => {
+  //   return  100 * ( ( a - b ) / ( (a+b)/2 ) );
+  //  }
 
     let com1 = {
       name: c1.data[0].Comune,
